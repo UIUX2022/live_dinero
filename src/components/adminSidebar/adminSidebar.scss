@@ -1,0 +1,140 @@
+@import "../../css/variables.scss";
+.sidebar {
+  width: 280px;
+  min-height: 80vh;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.35) 20.99%,
+    rgba(20, 136, 204, 0.31) 62.96%,
+    #1488cc 93.71%
+  );
+  border: 1px solid $Primary_Color;
+  box-shadow: inset -1px 0px 0px #dcdce0;
+  border-radius: 0px 60px 60px 0px;
+  padding: 35px 5px;
+  overflow: hidden;
+  .userProfile {
+    background: $Primary_Color;
+    box-shadow: 0px 2px 2px $Primary_Color;
+    border-radius: 43px;
+    padding: 8px;
+    display: flex;
+    gap: 5px;
+    img {
+      width: 40px;
+      height: 40px;
+    }
+    h6 {
+      margin: 0px;
+      color: #ffffff;
+    }
+    p {
+      margin: 0px;
+      color: #ffffff;
+    }
+  }
+}
+.sideBar-menu {
+  list-style: none;
+  padding: 0px;
+  padding: 5px;
+  .sideBarLink {
+    a {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: #263238;
+      padding: 15px 0px;
+      font-family: Poppins;
+      font-size: 14px;
+      font-weight: 500;
+      &:hover {
+        color: $Primary_Color;
+      }
+      svg {
+        font-size: 22px;
+      }
+    }
+  }
+  .sideBarLink.active {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 100%;
+      background: $Primary_Color;
+      top: 0px;
+      left: -15px;
+      border-radius: 5px;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 80px;
+      height: 3px;
+      background: $Primary_Color;
+      bottom: 0px;
+      left: 15px;
+      border-radius: 5px;
+    }
+  }
+  a:hover {
+    color: #263238;
+  }
+}
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 240px;
+  }
+}
+@media (max-width: 768px) {
+  .sidebar {
+    width: 150px;
+    .userProfile {
+      display: block;
+      text-align: center;
+      border-radius: 15px 43px 15px 15px;
+      h6 {
+        font-size: 12px;
+      }
+      p {
+        font-size: 10px;
+      }
+    }
+  }
+  .sideBar-menu {
+    .sideBarLink {
+      a {
+        gap: 5px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+@media (max-width: 425px) {
+  .sidebar {
+    width: 60px;
+    border-radius: 0px 30px 30px 0px;
+    .userProfile {
+      display: none;
+    }
+  }
+  .sideBar-menu {
+    .sideBarLink {
+      a {
+        gap: 5px;
+        font-size: 12px;
+        justify-content: center;
+        span {
+          display: none;
+        }
+      }
+    }
+    .sideBarLink.active {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

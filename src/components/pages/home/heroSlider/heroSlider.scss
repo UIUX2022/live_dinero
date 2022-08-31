@@ -1,0 +1,245 @@
+@import "../../../../css/variables.scss";
+.heroItem {
+  position: relative;
+}
+.carousel-indicators {
+  display: none !important;
+}
+.heroSlider {
+  .carousel {
+    .carousel-inner {
+      .carousel-item {
+        width: 100%;
+        height: 80vh;
+        position: relative;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        &::after {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          right: 0px;
+          bottom: 0px;
+          content: "";
+          background-color: rgba(0,0,0,0.5);
+          z-index: 100;
+        }
+      }
+    }
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    span {
+      background-size: 40px 40px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      padding: 10px;
+      border: 1px solid #fff;
+      color: $Primary_Color;
+    }
+  }
+  .carousel-control-prev {
+    justify-content: space-around;
+  }
+  .carousel-control-next {
+    justify-content: space-around;
+  }
+}
+.heroContent {
+  top: 45%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  height: 80%;
+  width: 50%;
+  z-index: 1;
+  .heroText {
+    h2 {
+      font-family: Poppins;
+      font-size: 54px;
+      font-weight: 600;
+      line-height: 72px;
+      letter-spacing: 0.16875000298023224px;
+      text-align: left;
+      color: #fff;
+    }
+  }
+}
+.seacrhTabs {
+  .ant-tabs-ink-bar {
+    background-color: $Primary_Color;
+  }
+  .ant-tabs-top > .ant-tabs-nav {
+    margin: 0px;
+  }
+  .ant-tabs > .ant-tabs-nav .ant-tabs-nav-list {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 8px 8px 0px 0px;
+    overflow: hidden;
+    .ant-tabs-tab {
+      color: #000;
+      font-size: 16px;
+      font-weight: 500;
+      border-right: 1px solid rgba(255, 255, 255, 1);
+      margin: 0px;
+
+      .ant-tabs-tab-btn {
+        padding: 0px 35px;
+      }
+    }
+    .ant-tabs-tab-active {
+      background-color: #fff;
+      border: none;
+      .ant-tabs-tab-btn {
+        color: $Primary_Color;
+      }
+    }
+  }
+  .ant-tabs-content-holder {
+    padding: 6px 15px;
+    background-color: #fff;
+    border-radius: 0px 0px 8px 8px;
+  }
+  .ant-tabs-top > .ant-tabs-nav::before {
+    height: 0px;
+  }
+}
+.heroSearch {
+  animation: showSearch 0.5s ease-in;
+  h6 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+  }
+  .ant-select-selector {
+    border: none !important;
+  }
+  .ant-select-selection-item {
+    color: #2c3c4a;
+  }
+  .ant-select-arrow {
+    color: #2c3c4a;
+  }
+  .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+    padding: 0px 5px;
+    border: none !important;
+  }
+  .ant-select-focused .ant-select-selector {
+    border: none !important;
+  }
+  button {
+    border: none;
+    background: $Primary_Color;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 4px;
+    padding: 10px 15px;
+  }
+}
+
+// media 1024
+@media screen and (max-width: 1024px) {
+  .heroContent {
+    top: 55%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    height: 80%;
+    width: 60%;
+    z-index: 1;
+  }
+  .heroContent .heroText h2 {
+    font-family: Poppins;
+    font-size: 47px;
+    font-weight: 600;
+    line-height: 60px;
+    letter-spacing: 0.168750003px;
+    text-align: left;
+    color: #fff;
+  }
+}
+
+// media 768
+@media screen and (max-width: 768px) {
+  .heroSlider .carousel .carousel-inner .carousel-item {
+    width: 100%;
+    height: 60vh;
+  }
+  .heroContent {
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    z-index: 1;
+  }
+  .heroContent .heroText h2 {
+    font-family: Poppins;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 50px;
+    letter-spacing: 0.168750003px;
+    text-align: left;
+    color: #fff;
+  }
+}
+
+// media 425
+@media (max-width: 425px) {
+  .seacrhTabs
+    .ant-tabs
+    > .ant-tabs-nav
+    .ant-tabs-nav-list
+    .ant-tabs-tab
+    .ant-tabs-tab-btn {
+    padding: 0px 20px;
+  }
+  .heroSlider .carousel .carousel-inner .carousel-item {
+    width: 100%;
+    height: 60vh;
+  }
+  .heroContent {
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    height: 80%;
+    width: 70%;
+    z-index: 1;
+  }
+  .heroContent .heroText h2 {
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 0.168750003px;
+    text-align: left;
+    color: #fff;
+  }
+  .carousel-control-prev {
+    display: none;
+  }
+  .carousel-control-next {
+    display: none;
+  }
+  .carousel-control-next-icon {
+    display: none;
+  }
+}
+
+// KeyFrames
+@keyframes showSearch {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,32 @@
+$Primary_Color: #1488cc;
+$light_color: #fff;
+$dark_color: #000;
+$brown_text: #757575;
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+//  Brandcrumb style
+@mixin bradcrumb {
+  margin-bottom: 0px;
+  .breadcrumb-item {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    a {
+      color: $brown_text;
+    }
+    &::before {
+      color: $Primary_Color;
+    }
+    &:last-child {
+      a {
+        color: $Primary_Color;
+      }
+    }
+    @media (max-width: 425px) {
+      font-size: 14px;
+    }
+  }
+}

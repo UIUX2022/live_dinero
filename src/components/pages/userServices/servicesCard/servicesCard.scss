@@ -1,0 +1,93 @@
+@import '../../../../css/variables.scss';
+.servicesCard {
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  max-width: 390px;
+  position: relative;
+  .shareIcon {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      color: $Primary_Color;
+      font-size: 20px;
+    }
+  }
+  .coverImg {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background: hsl(0, 0%, 0%, 50%);
+      border-radius: 5px;
+    }
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+  .cardDetails {
+    position: relative;
+    .cardProfile {
+      margin-top: -35px;
+      display: flex;
+      align-items: center;
+      gap: 2%;
+      img {
+        width: 105px;
+        height: 105px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+      }
+      h2 {
+        color: #263238;
+        font-family: Poppins;
+        font-size: 24px;
+        font-weight: 500;
+        margin: 0px;
+      }
+    }
+    .cardBtns {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+    }
+    .phonebtn {
+      flex: 1;
+      border: 1.2px solid $Primary_Color;
+      border-radius: 5px;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: $Primary_Color;
+      font-weight: 600;
+      svg {
+        font-size: 24px;
+      }
+    }
+    .whatsappbtn {
+      background: $Primary_Color;
+      border: none;
+      color: #fff;
+      padding: 8px 25px;
+      border-radius: 5px;
+      svg {
+        font-size: 24px;
+      }
+    }
+  }
+}

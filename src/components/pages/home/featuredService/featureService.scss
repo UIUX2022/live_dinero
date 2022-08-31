@@ -1,0 +1,64 @@
+@import "../../../../css/variables.scss";
+.feactureServies {
+  h2 {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 5px;
+    text-align: left;
+  }
+}
+.featureCard {
+  border-color: $Primary_Color;
+  border-width: 1px 1px 2px 1px;
+  border-style: solid;
+  padding: 6px;
+  border-radius: 4px;
+  .card-icon {
+    width: 30px;
+    height: 30px;
+    background: $Primary_Color;
+    float: right;
+    border-radius: 4px;
+    position: relative;
+    color: #fff;
+    svg {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+    }
+  }
+  h3 {
+    font-size: 16px;
+    @media (max-width: 425px) {
+      font-size: 12px;
+    }
+  }
+}
+
+// media 768px
+@media screen and (max-width: 768px) {
+  .feactureServies {
+    h2 {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+      letter-spacing: 2px;
+      text-align: left;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .feactureServies {
+    h2 {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 18px;
+      letter-spacing: 1px;
+      text-align: left;
+    }
+  }
+}

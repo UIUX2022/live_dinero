@@ -1,0 +1,108 @@
+@import "../../../css/variables.scss";
+.propertylistingHeader {
+  position: relative;
+  background-image: linear-gradient(
+      rgba(38, 50, 56, 0.6),
+      rgba(38, 50, 56, 0.6)
+    ),
+    url("../../../../public/images/pro_sales.png");
+  min-height: 400px;
+  .pageHeading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h2 {
+      font-weight: 600;
+      color: #fff;
+      font-size: 40px;
+    }
+  }
+}
+.Propslisting_breadcrumbs {
+  .breadcrumb {
+    @include bradcrumb;
+  }
+}
+.service_filter {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  @media screen and (max-width: 767px) {
+    justify-content: space-around;
+    .filter-bar {
+      flex: 1;
+      select {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.display_cat {
+  margin: 0;
+  height: 250px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $Primary_Color;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+.propsSales_filters {
+  .ant-collapse {
+    border: 0px solid #ebebeb;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  .ant-collapse > .ant-collapse-item {
+    /* border-bottom: 1px solid #d9d9d9; */
+    margin-top: 10px;
+    border: 2px solid #ebebeb;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .ant-collapse > .ant-collapse-item > .ant-collapse-header {
+    background-color: #fff;
+    span {
+      color: $Primary_Color;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+  .ant-collapse-content {
+    border-top: 0px solid #d9d9d9;
+  }
+  .ant-collapse > .ant-collapse-item:last-child {
+    border: 2px solid #ebebeb;
+    border-radius: 10px;
+  }
+}
+.propsSales_filters {
+  position: sticky; // Newly Added CSS
+  top: 0;
+}
+@media (max-width: 425px) {
+  .propertylistingHeader {
+    min-height: 190px;
+  }
+  .propertylistingHeader .pageHeading h2 {
+    font-size: 18px;
+  }
+}

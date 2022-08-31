@@ -1,0 +1,14 @@
+.latestPropListing {
+  .section_header {
+    h2 {
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 64px;
+      margin-bottom: 0px;
+      @media (max-width: 425px) {
+        font-size: 22px;
+        line-height: 32px;
+      }
+    }
+  }
+}
