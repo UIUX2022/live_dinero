@@ -14,10 +14,10 @@
       padding: 0px 4px;
     }
     svg {
-      font-size: 22px;
+      font-size: 20px;
     }
     span {
-      font-size: 16px;
+      font-size: 14px;
     }
   }
 }
@@ -41,7 +41,7 @@
     color: $Primary_Color;
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.3s;
+    transition: all 0.3s linear ease;
     &:hover {
       color: $Primary_Color;
       font-size: 16px;

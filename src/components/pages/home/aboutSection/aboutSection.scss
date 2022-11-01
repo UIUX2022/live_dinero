@@ -1,5 +1,17 @@
 @import "../../../../css/variables.scss";
 .aboutSection {
+  position: relative;
+  &::after {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 3px;
+    border-radius: 3px;
+    content: "";
+    background-color: $Primary_Color;
+  }
   .about_imgs {
     img {
       width: 100%;

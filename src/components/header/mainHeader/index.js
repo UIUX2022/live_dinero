@@ -95,7 +95,7 @@ const MainHeader = () => {
           <Col xs={6} lg={1}>
             <div className="main-log mx-lg-auto">
               <Link to="/">
-                <img src="/images/Group.png" alt="logo" class=" p-3" />
+                <img src="/images/Group.png" alt="logo" class=" p-2" />
               </Link>
             </div>
           </Col>

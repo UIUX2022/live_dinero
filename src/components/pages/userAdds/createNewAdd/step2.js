@@ -1,75 +1,74 @@
 import { Button, Steps } from "antd";
-import { Row, Col } from "react-bootstrap";
 import { Icon } from "@iconify/react";
 import Adminlayout from "../../../layouts/adminLayout";
 const Step2 = (props) => {
   const { Step } = Steps;
   return (
     <>
-        <Row className="my-3">
-          <Col className="mySteps">
-            <Steps size="small" current={props.activeStep} className="px-1">
-              <Step title="Property Type " />
-              <Step title="Description & FAQ" />
-              <Step title="Requirement" />
-              <Step title="Person Detail" />
-              <Step />
-            </Steps>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Col>
-              <div className="pageTitle text-start">Property Detail </div>
-            </Col>
-          </Col>
-        </Row>
-        <form className="serviceForm propertyCard">
-          <Row>
-            <Col className="mt-4" md={12}>
-              <input
-                type="text"
-                placeholder="Property Title"
-                className="form-control"
-              />
-            </Col>
-            <Col className="mt-4 my-dropdown" md={6}>
-              <select className="form-control">
-                <option>Select Property Type</option>
-              </select>
-              <Icon icon="gridicons:dropdown" />
-            </Col>
-            <Col className="mt-4 my-dropdown" md={6}>
-              <select className="form-control">
-                <option>Select Features</option>
-              </select>
-              <Icon icon="gridicons:dropdown" />
-            </Col>
-            <Col className="mt-4 my-dropdown" md={6}>
-              <select className="form-control">
-                <option>Select Area Unit</option>
-              </select>
-              <Icon icon="gridicons:dropdown" />
-            </Col>
-            <Col className="mt-4" md={6}>
-              <input
-                type="text"
-                placeholder="Area Unit"
-                className="form-control"
-              />
-            </Col>
-          </Row>
-          <Row className="mt-5">
-            <Col className="text-end">
-              <Button
-                className="pro-add-btn"
-                onClick={() => props.setActiveStep(2)}
-              >
-                Proceed Next
-              </Button>
-            </Col>
-          </Row>
-        </form>
+      <div className="my-3 row">
+        <div className="mySteps col-12">
+          <Steps size="small" current={props.activeStep} className="px-1">
+            <Step title="Property Type " />
+            <Step title="Description & FAQ" />
+            <Step title="Requirement" />
+            <Step title="Person Detail" />
+            <Step />
+          </Steps>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-12">
+          <div className="pageTitle text-start">Property Detail </div>
+        </div>
+      </div>
+      <form className="serviceForm propertyCard">
+        <div className="row">
+          <div className="mt-4 col-12">
+            <input
+              type="text"
+              placeholder="Property Title"
+              className="form-control"
+            />
+          </div>
+          <div className="mt-4 my-dropdown col-md-6">
+            <select className="form-control">
+              <option>Select Property Type</option>
+            </select>
+            <Icon icon="gridicons:dropdown" />
+          </div>
+          <div className="mt-4 my-dropdown col-md-6">
+            <select className="form-control">
+              <option>Select Property Type</option>
+            </select>
+            <Icon icon="gridicons:dropdown" />
+          </div>
+          <div className="mt-4 my-dropdown col-md-6">
+            <select className="form-control">
+              <option>Select Property Type</option>
+            </select>
+            <Icon icon="gridicons:dropdown" />
+          </div>
+          
+          
+          <div className="mt-4 col-md-6">
+            <input
+              type="text"
+              placeholder="Area Unit"
+              className="form-control"
+            />
+          </div>
+        </div>
+        <div className="mt-5 row">
+          <div className="text-end col-12">
+            <Button
+              className="pro-add-btn"
+              onClick={() => props.setActiveStep(2)}
+            >
+              Proceed Next
+            </Button>
+          </div>
+        </div>
+      </form>
     </>
   );
 };

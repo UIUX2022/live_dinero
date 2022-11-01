@@ -22,6 +22,9 @@ const PropertyDetailPage = () => {
                 </Breadcrumb>
               </Col>
             </Row>
+            <Row>
+              <Col></Col>
+            </Row>
             <PropertyDetails />
           </Container>
         </div>

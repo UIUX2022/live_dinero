@@ -14,7 +14,7 @@
     justify-content: space-around;
     align-items: center;
     .main-item {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 500;
       @media (max-width: 1025px) {
         font-size: 14px;
@@ -37,6 +37,9 @@
     justify-content: space-around;
     align-items: center;
     gap: 8px;
+    svg {
+      font-size: 28px;
+    }
   }
   button.btn1 {
     font-family: "Poppins", sans-serif;
@@ -44,9 +47,9 @@
     border: none;
     background-color: $Primary_Color;
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 4px;
-    @media  (max-width: 1024px) {
+    @media (max-width: 1024px) {
       padding: 6px 10px;
       font-size: 14px;
     }
@@ -59,16 +62,14 @@
     border: 2px solid $Primary_Color;
     background-color: #fff;
     color: $Primary_Color;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 4px;
     padding: 5px 15px;
-    @media 
-     (max-width: 1024px) {
+    @media (max-width: 1024px) {
       padding: 6px 10px;
       font-size: 14px;
     }
-    @media 
-    (max-width: 425px) {
+    @media (max-width: 425px) {
       padding: 6px 10px;
       font-size: 12px;
     }
@@ -92,7 +93,7 @@
       height: 32px;
       border-radius: 50%;
       position: relative;
-      background:  #1488CC26;
+      background: #1488cc26;
       svg {
         position: absolute;
         top: 50%;
@@ -118,7 +119,7 @@
   }
 }
 .mobile_menu_icon {
-  svg{
-    font-size:30px;
+  svg {
+    font-size: 30px;
   }
 }

@@ -54,7 +54,7 @@ const LatestPropListing = () => {
             <Col className="pb-4">
               <Slider {...FeaturedSettings}>
                 {data?.map((data, id) => {
-                  return <UserAddsCard />;
+                  return <UserAddsCard key={id} />;
                 })}
               </Slider>
             </Col>

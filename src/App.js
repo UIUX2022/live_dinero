@@ -27,6 +27,7 @@ function App() {
 
       <Mainheader /> */}
       <Routes>
+        
         <Route path="/" element={<Home />} />
         <Route path="/enquire" element={<Enquire />} />
         <Route path="/register" element={<Register />} />

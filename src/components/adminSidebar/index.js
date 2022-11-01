@@ -4,6 +4,7 @@ import { Icon } from "@iconify/react";
 const AdminSidebar = () => {
   const local = useLocation(AdminSidebar);
   console.log("user current location is", local);
+  
   return (
     <div className="sidebar">
       <div className="userProfile">

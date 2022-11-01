@@ -21,7 +21,7 @@ const Register = () => {
               <Row className="align-items-center">
                 <Col md={6}>
                   <h6 className="text-center">
-                    Register your account to access your desire services{" "}
+                    Register your account to access your desire services
                   </h6>
                 </Col>
                 <Col md={6}>
